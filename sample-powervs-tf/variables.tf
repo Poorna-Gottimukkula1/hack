@@ -50,7 +50,7 @@ variable "shareable" {
     default     = "true"
 }
 
-variable "network" {
+variable "pvs_network_name" {
     description = "List of networks that should be attached to the VM - Create this network before running terraform"
     default     = "DHCPSERVERe04658d613eb443786317f29c3069e0e_Private"
 }
@@ -78,4 +78,33 @@ variable "replication_scheme" {
 variable "replicants" {
     description = "Number of VM instances to deploy"
     default     = "1"
+}
+
+// dhcp network
+variable "cluster_id" {
+  type        = string
+  description = "The ID created by the installer to uniquely identify the created cluster."
+}
+
+variable "machine_cidr" {
+  type        = string
+  description = "The machine network (IPv4 only)"
+}
+
+variable "dns_server" {
+  type        = string
+  description = "The desired DNS server for the DHCP instance to server."
+  default     = "1.1.1.1"
+}
+
+variable "enable_snat" {
+  type        = bool
+  description = "Boolean indicating if SNAT should be enabled."
+  default     = true
+}
+
+variable "transit_gateway_enabled" {
+  type        = bool
+  description = "Boolean indicating if Transit Gateways should be used."
+  default     = false
 }
