@@ -27,7 +27,7 @@ variable "power_instance_id" {
 
 variable "memory" {
     description = "Amount of memory (GB) to be allocated to the VM"
-    default     = "8"
+    default     = "4"
 }
 
 variable "processors" {
@@ -80,11 +80,11 @@ variable "replicants" {
     default     = "1"
 }
 
-// dhcp network
-variable "cluster_id" {
-  type        = string
-  description = "The ID created by the installer to uniquely identify the created cluster."
-}
+# // dhcp network
+# variable "cluster_id" {
+#   type        = string
+#   description = "The ID created by the installer to uniquely identify the created cluster."
+# }
 
 variable "machine_cidr" {
   type        = string

@@ -1,0 +1,13 @@
+machine_cidr            = "10.128.0.0/24"
+transit_gateway_enabled = true
+enable_snat             = true
+vm_name                 = "test-fcos"
+image_name              = "fedora-coreos-38.20230918-tier1"
+ssh_key_name            = "key"
+memory                  = "2"
+processors              = "0.5"
+power_instance_id       = ""
+resource_group          = ""
+ibmcloud_region         = "tor"
+ibmcloud_zone           = "tor01"
+ibmcloud_api_key        = ""
